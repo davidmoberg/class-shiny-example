@@ -8,12 +8,11 @@
 #
 
 library(shiny)
-
 # Define UI for application that draws a histogram
 ui <- fluidPage(
 
     # Application title
-    titlePanel("Geyser go Woosh"),
+    titlePanel("Geyser Data"),
 
     # Sidebar with a slider input for number of bins 
     sidebarLayout(
@@ -41,7 +40,7 @@ server <- function(input, output) {
         bins <- seq(min(x), max(x), length.out = input$bins + 1)
 
         # draw the histogram with the specified number of bins
-        hist(x, breaks = bins, col = 'light blue', border = 'white')
+        hist(x, breaks = bins, col = 'darkmagenta', border = 'white')
     })
 }
 
